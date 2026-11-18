@@ -21,6 +21,12 @@ export default function Index() {
   const heroQr = useQrSvg(DEMO_PAYLOAD, HERO_DESIGN.qrFg, HERO_DESIGN.qrBg);
   const placas = usePlateCount();
 
+  // HashRouter trata "#studio" como rota "/studio" (→ 404). Por isso o scroll
+  // é feito na mão, sem mudar o hash.
+  const scrollToId = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <div className="min-h-screen">
       {/* ——— Topo ——— */}
@@ -35,11 +41,12 @@ export default function Index() {
         </div>
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <a href="#studio">
-            <Button className="h-10 rounded-2xl bg-primary px-5 text-sm font-bold text-primary-foreground shadow-[0_10px_24px_-10px_hsl(var(--primary)/0.8)] hover:bg-primary/90">
-              Criar minha placa
-            </Button>
-          </a>
+          <Button
+            onClick={() => scrollToId("studio")}
+            className="h-10 rounded-2xl bg-primary px-5 text-sm font-bold text-primary-foreground shadow-[0_10px_24px_-10px_hsl(var(--primary)/0.8)] hover:bg-primary/90"
+          >
+            Criar minha placa
+          </Button>
         </div>
       </header>
 
@@ -69,17 +76,20 @@ export default function Index() {
               valor, e baixe em <strong className="text-foreground">PNG ou PDF</strong>.
             </p>
             <div className="mt-6 flex flex-wrap gap-2.5">
-              <a href="#studio">
-                <Button className="h-12 rounded-2xl bg-primary px-7 text-base font-extrabold text-primary-foreground shadow-[0_14px_30px_-12px_hsl(var(--primary)/0.9)] hover:bg-primary/90">
-                  Começar agora
-                  <ArrowDown className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
-              <a href="#como-funciona">
-                <Button variant="outline" className="h-12 rounded-2xl border-2 px-6 text-base font-bold">
-                  Ver como funciona
-                </Button>
-              </a>
+              <Button
+                onClick={() => scrollToId("studio")}
+                className="h-12 rounded-2xl bg-primary px-7 text-base font-extrabold text-primary-foreground shadow-[0_14px_30px_-12px_hsl(var(--primary)/0.9)] hover:bg-primary/90"
+              >
+                Começar agora
+                <ArrowDown className="ml-2 h-4 w-4" />
+              </Button>
+              <Button
+                onClick={() => scrollToId("como-funciona")}
+                variant="outline"
+                className="h-12 rounded-2xl border-2 px-6 text-base font-bold"
+              >
+                Ver como funciona
+              </Button>
             </div>
             <ul className="mt-7 flex flex-wrap gap-x-4 gap-y-2">
               {PERKS.map((p) => (

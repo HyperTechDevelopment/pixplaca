@@ -199,7 +199,7 @@ export default function Studio() {
             </div>
 
             {!ready && (
-              <p className="mt-3 rounded-2xl bg-accent/10 px-3 py-2 text-xs font-semibold text-accent-foreground/80">
+              <p className="mt-3 rounded-2xl bg-accent/10 px-3 py-2 text-xs font-semibold text-foreground/80">
                 <span className="text-accent">Prévia de exemplo.</span> Informe uma chave Pix válida para gerar a placa
                 real.
               </p>

@@ -4,6 +4,8 @@
 
 Crie placas de QR Code Pix com 30 designs. Personalize e baixe em PNG ou PDF.
 
+**Demo:** https://hypertechdevelopment.github.io/pixplaca/
+
 ![Tela inicial do PixPlaca com uma placa de exemplo](./docs/screenshots/hero.png)
 
 ## O que faz
@@ -43,4 +45,8 @@ pnpm build
 
 ## Segurança
 
-Tudo roda no navegador: a chave, a geração do QR e o download. Nenhum servidor recebe os dados. Upload de logo aceita só PNG, JPG e WebP. Os cabeçalhos de segurança estão em `vercel.json`.
+Tudo roda no navegador: a chave, a geração do QR e o download. Nenhum servidor recebe os dados. Upload de logo aceita só PNG, JPG e WebP, com limite de 2 MB. A política de segurança (CSP) vai direto no `index.html`, pois o GitHub Pages não envia cabeçalhos de servidor.
+
+## Licença
+
+MIT — veja o arquivo [LICENSE](LICENSE).

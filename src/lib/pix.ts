@@ -2,16 +2,20 @@
 // ponytail: valida apenas formato da chave (regex/tamanho); verificação real
 // da titularidade só existe via API do banco — upgrade quando houver backend.
 
+import { stripNonAscii } from "@/lib/text";
+
 export type PixKeyType = "cpf" | "cnpj" | "email" | "telefone" | "aleatoria" | "desconhecida";
 
 export function detectPixKeyType(raw: string): PixKeyType {
   const key = raw.trim();
   const digits = key.replace(/\D/g, "");
   if (/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(key)) return "aleatoria";
-  if (/^\+?55\d{10,11}$/.test(key) || /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/.test(key)) return "telefone";
   if (/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(key)) return "email";
-  if (digits.length === 11 && /^\d+$/.test(digits)) return "cpf";
+  // CPF/CNPJ antes do telefone: um CPF de 11 dígitos tem o mesmo formato de um
+  // celular, então o dígito verificador decide (CPF válido → cpf; senão, telefone).
   if (digits.length === 14 && /^\d+$/.test(digits)) return "cnpj";
+  if (digits.length === 11 && /^\d+$/.test(digits)) return cpfOk(digits) ? "cpf" : "telefone";
+  if (/^\+?55\d{10,11}$/.test(key) || /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/.test(key)) return "telefone";
   return "desconhecida";
 }
 
@@ -93,9 +97,7 @@ export interface PixPayloadInput {
 export function buildPixPayload({ key, name, city, amount, txid }: PixPayloadInput): string {
   const gui = tlv("00", "br.gov.bcb.pix") + tlv("01", normalizePixKey(key));
   const clean = (s: string) =>
-    s
-      .normalize("NFD")
-      .replace(/[^\x00-\x7F]/g, "")
+    stripNonAscii(s.normalize("NFD"))
       .replace(/[^A-Za-z0-9 .'-]/g, "")
       .trim() || "RECEBEDOR";
   const base =

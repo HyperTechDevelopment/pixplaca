@@ -4,6 +4,8 @@
 
 Create Pix QR Code signs with 30 designs. Customize and download as PNG or PDF.
 
+**Demo:** https://hypertechdevelopment.github.io/pixplaca/
+
 ![PixPlaca home screen with a sample sign](./docs/screenshots/hero.png)
 
 ## What it does
@@ -43,4 +45,8 @@ pnpm build
 
 ## Security
 
-Everything runs in the browser: the key, the QR generation and the download. No server receives the data. Logo upload accepts PNG, JPG and WebP only. Security headers live in `vercel.json`.
+Everything runs in the browser: the key, the QR generation and the download. No server receives the data. Logo upload accepts PNG, JPG and WebP only, capped at 2 MB. The security policy (CSP) ships in `index.html` itself, since GitHub Pages doesn't send server headers.
+
+## License
+
+MIT — see the [LICENSE](LICENSE) file.
