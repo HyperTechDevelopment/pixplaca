@@ -1,27 +1,42 @@
-# PixPlaca
+<p align="center">
+  <picture>
+    <source srcset="./docs/assets/pixplaca-logo-static.png" media="(prefers-reduced-motion: reduce)" />
+    <source srcset="./docs/assets/pixplaca-logo-animated.gif" type="image/gif" />
+    <img src="./docs/assets/pixplaca-logo-static.png" alt="Logo PixPlaca" width="160" height="160" />
+  </picture>
+</p>
 
-[![Sponsor](https://img.shields.io/badge/Sponsor-❤-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/HyperTechDevelopment)
+<p align="center">
+  <img src="./assets/readme/hero.svg" width="100%" alt="PixPlaca — sua placa de QR Code Pix, pronta para imprimir" />
+</p>
 
-[English version](README.en.md)
+<p align="center">
+  <a href="https://hypertechdevelopment.github.io/pixplaca/"><strong>Ver demo</strong></a>
+  ·
+  <a href="README.en.md">English version</a>
+  <br />
+  <a href="https://github.com/sponsors/HyperTechDevelopment"><img src="https://img.shields.io/badge/Sponsor-❤-ea4aaa?logo=githubsponsors&logoColor=white" alt="Sponsor" /></a>
+  <img src="https://img.shields.io/badge/Pix-BR%20Code-12A594" alt="Pix BR Code" />
+  <img src="https://img.shields.io/badge/PNG-1500x2000-0E2420" alt="PNG 1500 por 2000" />
+  <img src="https://img.shields.io/badge/PDF-A4-F26B1D" alt="PDF A4" />
+</p>
 
-Crie placas de QR Code Pix com 30 designs. Personalize e baixe em PNG ou PDF.
-
-**Demo:** https://hypertechdevelopment.github.io/pixplaca/
+Crie placas de QR Code Pix com **30 designs** em 4 estilos — minimalista, colorido, divertido e corporativo. Personalize, visualize na hora e baixe em **PNG** ou **PDF**. Nada sai do navegador.
 
 ![Tela inicial do PixPlaca com uma placa de exemplo](./docs/screenshots/hero.png)
 
-## O que faz
+## Como funciona
 
-- QR Code Pix no padrão BR Code
-- 30 designs em 4 estilos: minimalista, colorido, divertido e corporativo
-- Nome, cidade, mensagem, valor fixo ou livre, logo e cor de destaque
-- Logos largas ou altas se ajustam sozinhas ao espaço da placa
-- Validação de CPF e CNPJ com dígito verificador
-- Download em PNG (1500×2000px) ou PDF A4
-- Modo escuro com botão e preferência do sistema
-- Nenhum dado sai do navegador
+<p align="center">
+  <img src="./assets/readme/workflow.svg" width="100%" alt="Quatro passos: chave Pix, personalizar, QR BR Code, baixar" />
+</p>
 
-## Como rodar
+1. **Informe a chave Pix** — CPF e CNPJ passam por validação de dígito verificador.
+2. **Personalize** — nome, cidade, mensagem, valor fixo ou livre, logo e cor de destaque. Logos largas ou altas se ajustam sozinhas ao espaço da placa.
+3. **QR no padrão BR Code** — payload gerado localmente, com CRC16.
+4. **Baixe** — PNG de 1500×2000 px ou PDF em folha A4.
+
+## Uso
 
 ```bash
 pnpm install

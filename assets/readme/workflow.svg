@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="190" viewBox="0 0 1200 190" role="img" aria-labelledby="wf-title wf-desc">
+  <title id="wf-title">Como funciona: quatro passos</title>
+  <desc id="wf-desc">Quatro etapas numeradas: chave Pix, personalizar, gerar QR Code, baixar PNG ou PDF.</desc>
+  <defs>
+    <pattern id="wfdots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.4" fill="#12A594" opacity="0.22"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="190" rx="28" fill="#0E2420"/>
+  <rect width="1200" height="190" rx="28" fill="url(#wfdots)" opacity="0.4"/>
+  <line x1="170" y1="95" x2="1030" y2="95" stroke="#12A594" stroke-width="3" opacity="0.45"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">
+    <g id="step-1" transform="translate(60 34)">
+      <rect width="220" height="122" rx="20" fill="#14332B"/>
+      <circle cx="36" cy="36" r="20" fill="#12A594"/>
+      <text x="36" y="43" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">1</text>
+      <g transform="translate(66 18)" stroke="#7FE3D2" stroke-width="5" fill="none" stroke-linecap="round">
+        <circle cx="12" cy="12" r="9"/>
+        <line x1="19" y1="19" x2="30" y2="30"/>
+      </g>
+      <text x="24" y="100" font-size="21" font-weight="700" fill="#FFFFFF">Chave Pix</text>
+      <text x="24" y="126" font-size="16" fill="#9CC5BB" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">CPF CNPJ e-mail…</text>
+    </g>
+    <g id="step-2" transform="translate(330 34)">
+      <rect width="220" height="122" rx="20" fill="#14332B"/>
+      <circle cx="36" cy="36" r="20" fill="#12A594"/>
+      <text x="36" y="43" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">2</text>
+      <g transform="translate(64 18)">
+        <circle cx="10" cy="18" r="9" fill="#F26B1D"/>
+        <circle cx="30" cy="12" r="7" fill="#3B82C4"/>
+        <circle cx="28" cy="28" r="7" fill="#2BD9B8"/>
+      </g>
+      <text x="24" y="100" font-size="21" font-weight="700" fill="#FFFFFF">Personalize</text>
+      <text x="24" y="126" font-size="16" fill="#9CC5BB" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">30 designs + logo</text>
+    </g>
+    <g id="step-3" transform="translate(600 34)">
+      <rect width="220" height="122" rx="20" fill="#14332B"/>
+      <circle cx="36" cy="36" r="20" fill="#12A594"/>
+      <text x="36" y="43" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">3</text>
+      <g transform="translate(64 14)" fill="#7FE3D2">
+        <rect x="0" y="0" width="16" height="16" rx="3"/>
+        <rect x="24" y="0" width="16" height="16" rx="3"/>
+        <rect x="0" y="24" width="16" height="16" rx="3"/>
+        <rect x="24" y="24" width="10" height="10" rx="2"/>
+      </g>
+      <text x="24" y="100" font-size="21" font-weight="700" fill="#FFFFFF">QR BR Code</text>
+      <text x="24" y="126" font-size="16" fill="#9CC5BB" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">payload + CRC16</text>
+    </g>
+    <g id="step-4" transform="translate(870 34)">
+      <rect width="220" height="122" rx="20" fill="#14332B"/>
+      <circle cx="36" cy="36" r="20" fill="#F26B1D"/>
+      <text x="36" y="43" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">4</text>
+      <g transform="translate(66 16)" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="8" y1="0" x2="8" y2="24"/>
+        <polyline points="0,16 8,24 16,16"/>
+        <line x1="0" y1="32" x2="16" y2="32"/>
+      </g>
+      <text x="24" y="100" font-size="21" font-weight="700" fill="#FFFFFF">Baixe</text>
+      <text x="24" y="126" font-size="16" fill="#9CC5BB" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">PNG 1500x2000 / A4</text>
+    </g>
+  </g>
+</svg>

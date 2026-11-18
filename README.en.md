@@ -1,23 +1,40 @@
-# PixPlaca
+<p align="center">
+  <picture>
+    <source srcset="./docs/assets/pixplaca-logo-static.png" media="(prefers-reduced-motion: reduce)" />
+    <source srcset="./docs/assets/pixplaca-logo-animated.gif" type="image/gif" />
+    <img src="./docs/assets/pixplaca-logo-static.png" alt="PixPlaca logo" width="160" height="160" />
+  </picture>
+</p>
 
-[Versão em português](README.md)
+<p align="center">
+  <img src="./assets/readme/hero.svg" width="100%" alt="PixPlaca — your Pix QR Code sign, ready to print" />
+</p>
 
-Create Pix QR Code signs with 30 designs. Customize and download as PNG or PDF.
+<p align="center">
+  <a href="https://hypertechdevelopment.github.io/pixplaca/"><strong>Live demo</strong></a>
+  ·
+  <a href="README.md">Versão em português</a>
+  <br />
+  <a href="https://github.com/sponsors/HyperTechDevelopment"><img src="https://img.shields.io/badge/Sponsor-❤-ea4aaa?logo=githubsponsors&logoColor=white" alt="Sponsor" /></a>
+  <img src="https://img.shields.io/badge/Pix-BR%20Code-12A594" alt="Pix BR Code" />
+  <img src="https://img.shields.io/badge/PNG-1500x2000-0E2420" alt="PNG 1500 by 2000" />
+  <img src="https://img.shields.io/badge/PDF-A4-F26B1D" alt="PDF A4" />
+</p>
 
-**Demo:** https://hypertechdevelopment.github.io/pixplaca/
+Create Pix QR Code signs with **30 designs** in 4 styles — minimal, colorful, playful and corporate. Customize, preview instantly and download as **PNG** or **PDF**. Nothing leaves the browser.
 
 ![PixPlaca home screen with a sample sign](./docs/screenshots/hero.png)
 
-## What it does
+## How it works
 
-- Pix QR Code in the BR Code format
-- 30 designs in 4 styles: minimal, colorful, playful and corporate
-- Name, city, message, fixed or open amount, logo and accent color
-- Wide or tall logos adjust to the sign space on their own
-- CPF and CNPJ validation with check digits
-- Download as PNG (1500×2000px) or A4 PDF
-- Dark mode with toggle and system preference
-- No data leaves the browser
+<p align="center">
+  <img src="./assets/readme/workflow.svg" width="100%" alt="Four steps: Pix key, customize, BR Code QR, download" />
+</p>
+
+1. **Enter your Pix key** — CPF and CNPJ go through check-digit validation.
+2. **Customize** — name, city, message, fixed or open amount, logo and accent color. Wide or tall logos fit the sign space on their own.
+3. **BR Code QR** — payload generated locally, with CRC16.
+4. **Download** — 1500×2000 px PNG or A4 PDF.
 
 ## Run it
 
