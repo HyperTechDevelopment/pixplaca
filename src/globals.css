@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 170 40% 97%;
+    --foreground: 180 35% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 180 35% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 35% 12%;
+
+    --primary: 173 81% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 168 55% 90%;
+    --secondary-foreground: 180 35% 12%;
+
+    --muted: 170 30% 93%;
+    --muted-foreground: 180 12% 42%;
+
+    --accent: 16 95% 62%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 170 25% 86%;
+    --input: 170 25% 86%;
+    --ring: 173 81% 33%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 180 30% 8%;
+    --foreground: 170 40% 95%;
+    --card: 180 28% 11%;
+    --card-foreground: 170 40% 95%;
+    --popover: 180 28% 11%;
+    --popover-foreground: 170 40% 95%;
+    --primary: 173 70% 45%;
+    --primary-foreground: 180 35% 10%;
+    --secondary: 180 25% 18%;
+    --secondary-foreground: 170 40% 95%;
+    --muted: 180 25% 16%;
+    --muted-foreground: 170 15% 65%;
+    --accent: 16 90% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 180 20% 20%;
+    --input: 180 20% 20%;
+    --ring: 173 70% 45%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Nunito", ui-sans-serif, system-ui, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    body {
+      transition: none;
+    }
+  }
+
+  @keyframes countPop {
+    from {
+      opacity: 0.4;
+      transform: translateY(-2px) scale(1.18);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .font-display {
+    font-family: "Poppins", "Nunito", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .dot-grid {
+    background-image: radial-gradient(hsl(var(--primary) / 0.14) 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+  }
+}
