@@ -1,44 +1,46 @@
 # PixPlaca
 
-Gerador de placas de QR Code Pix com **30 designs** prontos. Escolha um modelo, personalize e baixe em **PNG** (1500×2000px) ou **PDF A4** pronto para imprimir.
+[English version](README.en.md)
+
+Crie placas de QR Code Pix com 30 designs. Personalize e baixe em PNG ou PDF.
+
+![Tela inicial do PixPlaca com uma placa de exemplo](./docs/screenshots/hero.png)
 
 ## O que faz
 
-- **QR Code Pix oficial** — payload BR Code (EMV) com CRC16 válido, gerado no navegador
-- **30 designs** em 4 estilos: minimalista (8), colorido (8), divertido (7), corporativo (7)
-- **Personalização** — chave, nome, cidade, mensagem, valor fixo ou livre, logo e cor de destaque
-- **Validação real** — CPF/CNPJ com dígito verificador (evita QR apontando para outra pessoa)
-- **Ajuste automático de logo** — quadrada vira círculo; larga/alta vira chip com a imagem inteira
-- **Modo escuro** — botão manual + preferência do sistema
-- **Contador local** de placas geradas neste navegador
-- **Privacidade** — nenhum dado sai do navegador: sem backend, sem contas, sem requisições
+- QR Code Pix no padrão BR Code
+- 30 designs em 4 estilos: minimalista, colorido, divertido e corporativo
+- Nome, cidade, mensagem, valor fixo ou livre, logo e cor de destaque
+- Logos largas ou altas se ajustam sozinhas ao espaço da placa
+- Validação de CPF e CNPJ com dígito verificador
+- Download em PNG (1500×2000px) ou PDF A4
+- Modo escuro com botão e preferência do sistema
+- Nenhum dado sai do navegador
 
-## Stack
-
-React 19 + TypeScript + Vite, Tailwind CSS e shadcn/ui. QR via `qrcode`, exportação via `html-to-image` e `jspdf`.
-
-## Rodando localmente
+## Como rodar
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Build de produção: `pnpm build`
+Build de produção:
 
-## Estrutura
+```bash
+pnpm build
+```
 
-| Caminho | Responsabilidade |
+## Onde fica o quê
+
+| Arquivo | Responsabilidade |
 | --- | --- |
-| `src/lib/pix.ts` | Payload BR Code, CRC16, validação de chave (CPF/CNPJ) |
-| `src/lib/designs.ts` | Catálogo dos 30 designs e tipos da placa |
-| `src/components/PlateCanvas.tsx` | Renderização dos 10 layouts de placa |
-| `src/components/Studio.tsx` | Editor: dados, galeria de designs, personalização e download |
+| `src/lib/pix.ts` | Payload BR Code, CRC16 e validação de chave |
+| `src/lib/designs.ts` | Catálogo dos 30 designs |
+| `src/components/PlateCanvas.tsx` | Os 10 layouts de placa |
+| `src/components/Studio.tsx` | Editor, galeria e download |
 | `src/lib/export.ts` | Exportação PNG e PDF A4 |
 | `src/lib/usePlateCount.ts` | Contador local de placas geradas |
 
 ## Segurança
 
-Cabeçalhos em `vercel.json` (CSP em `Report-Only`, `frame-ancestors 'none'`, HSTS, `nosniff`). Upload de logo restrito a PNG/JPEG/WebP.
-
-> Antes de publicar em produção, revise o CSP em `vercel.json` e troque `Content-Security-Policy-Report-Only` por `Content-Security-Policy` após conferir o console.
+Tudo roda no navegador: a chave, a geração do QR e o download. Nenhum servidor recebe os dados. Upload de logo aceita só PNG, JPG e WebP. Os cabeçalhos de segurança estão em `vercel.json`.
