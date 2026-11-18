@@ -1,11 +1,10 @@
 import { toPng } from "html-to-image";
 import { jsPDF } from "jspdf";
+import { stripNonAscii } from "@/lib/text";
 
 export function slug(name: string): string {
   return (
-    name
-      .normalize("NFD")
-      .replace(/[^\x00-\x7F]/g, "")
+    stripNonAscii(name.normalize("NFD"))
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-|-$/g, "") || "placa-pix"

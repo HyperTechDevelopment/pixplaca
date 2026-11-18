@@ -26,4 +26,11 @@ export default tseslint.config(
       "@typescript-eslint/no-unused-vars": "off",
     },
   },
+  {
+    // Componentes shadcn/ui são gerados e não devem ser editados (AI_RULES.md).
+    files: ["src/components/ui/**/*.{ts,tsx}"],
+    rules: {
+      "@typescript-eslint/no-empty-object-type": "off",
+    },
+  },
 );

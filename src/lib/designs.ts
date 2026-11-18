@@ -115,7 +115,11 @@ export const designById = (id: string): Design =>
 
 export function amountNumber(data: PlateData): number | undefined {
   if (data.amountMode !== "fixo") return undefined;
-  const n = Number(data.amount.replace(",", "."));
+  // pt-BR: com vírgula, o ponto é milhar ("1.234,56" → 1234.56); sem vírgula,
+  // o ponto é tratado como decimal ("1234.56" → 1234.56).
+  const raw = data.amount.trim();
+  const normalized = raw.includes(",") ? raw.replace(/\./g, "").replace(",", ".") : raw;
+  const n = Number(normalized);
   return Number.isFinite(n) && n > 0 ? Math.round(n * 100) / 100 : undefined;
 }
 
