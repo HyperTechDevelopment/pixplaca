@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 64 64" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">PixPlaca</title>
+  <desc id="logo-desc">Teal rounded tile with three QR finder squares and a pixel field, the PixPlaca mark.</desc>
+  <g id="tile">
+    <rect id="tile-bg" x="2" y="2" width="60" height="60" rx="14" fill="#12A594"/>
+  </g>
+  <g id="finder-top-left">
+    <rect id="ftl-outer" x="11" y="11" width="17" height="17" rx="3.5" fill="#FFFFFF"/>
+    <rect id="ftl-inner" x="15" y="15" width="9" height="9" rx="2" fill="#12A594"/>
+    <rect id="ftl-core" x="18" y="18" width="3" height="3" fill="#FFFFFF"/>
+  </g>
+  <g id="finder-top-right">
+    <rect id="ftr-outer" x="36" y="11" width="17" height="17" rx="3.5" fill="#FFFFFF"/>
+    <rect id="ftr-inner" x="40" y="15" width="9" height="9" rx="2" fill="#12A594"/>
+    <rect id="ftr-core" x="43" y="18" width="3" height="3" fill="#FFFFFF"/>
+  </g>
+  <g id="finder-bottom-left">
+    <rect id="fbl-outer" x="11" y="36" width="17" height="17" rx="3.5" fill="#FFFFFF"/>
+    <rect id="fbl-inner" x="15" y="40" width="9" height="9" rx="2" fill="#12A594"/>
+    <rect id="fbl-core" x="18" y="43" width="3" height="3" fill="#FFFFFF"/>
+  </g>
+  <g id="pixel-field">
+    <rect id="px-1" x="36" y="36" width="7" height="7" rx="1.5" fill="#FFFFFF"/>
+    <rect id="px-2" x="45" y="36" width="8" height="4" rx="1" fill="#FFFFFF" opacity="0.85"/>
+    <rect id="px-3" x="36" y="45" width="4" height="8" rx="1" fill="#FFFFFF" opacity="0.85"/>
+    <rect id="px-4" x="42" y="43" width="11" height="10" rx="2" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+</svg>
