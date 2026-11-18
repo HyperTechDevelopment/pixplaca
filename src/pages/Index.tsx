@@ -1,6 +1,7 @@
 import { ArrowDown, BadgeCheck, Check, QrCode, Scissors, ShieldCheck, Wand2, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Studio from "@/components/Studio";
+import { DonateDialog } from "@/components/DonateDialog";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { PlatePreview, useQrSvg, DEMO_PAYLOAD } from "@/components/PlateCanvas";
 import { DEFAULT_PLATE, DESIGNS } from "@/lib/designs";
@@ -184,6 +185,7 @@ export default function Index() {
             Placas de QR Code Pix no padrão BR Code. O código é gerado no seu navegador; nada é enviado para servidores.
           </p>
           <p className="text-xs opacity-70">© {new Date().getFullYear()} PixPlaca · Seus dados ficam no seu navegador.</p>
+          <DonateDialog />
           {placas > 0 && (
             <p className="text-xs font-semibold opacity-80">
               {placas} {placas === 1 ? "placa gerada" : "placas geradas"} neste navegador
