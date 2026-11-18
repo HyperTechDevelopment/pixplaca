@@ -1,4 +1,4 @@
-import { ArrowDown, BadgeCheck, Check, QrCode, Scissors, ShieldCheck, Wand2, Zap } from "lucide-react";
+import { ArrowDown, BadgeCheck, Check, Github, QrCode, Scissors, ShieldCheck, Star, Wand2, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Studio from "@/components/Studio";
 import { DonateDialog } from "@/components/DonateDialog";
@@ -42,6 +42,18 @@ export default function Index() {
         </div>
         <div className="flex items-center gap-2">
           <ThemeToggle />
+          <a
+            href="https://github.com/HyperTechDevelopment/pixplaca"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Dê uma estrela no GitHub"
+            aria-label="Dê uma estrela para o PixPlaca no GitHub"
+            className="group inline-flex h-10 shrink-0 items-center gap-1.5 rounded-2xl border-2 border-border/70 bg-card px-3 text-sm font-bold text-foreground transition hover:border-primary/60 hover:bg-primary/5"
+          >
+            <Github className="h-4 w-4" />
+            <Star className="h-4 w-4 text-primary transition group-hover:scale-110 group-hover:fill-primary" />
+            <span className="hidden md:inline">Dê uma estrela</span>
+          </a>
           <Button
             onClick={() => scrollToId("studio")}
             className="h-10 rounded-2xl bg-primary px-5 text-sm font-bold text-primary-foreground shadow-[0_10px_24px_-10px_hsl(var(--primary)/0.8)] hover:bg-primary/90"
