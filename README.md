@@ -1,5 +1,7 @@
 # PixPlaca
 
+[![Sponsor](https://img.shields.io/badge/Sponsor-❤-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/HyperTechDevelopment)
+
 [English version](README.en.md)
 
 Crie placas de QR Code Pix com 30 designs. Personalize e baixe em PNG ou PDF.
